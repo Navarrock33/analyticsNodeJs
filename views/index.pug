@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    // Librerias de meterializecss
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    // Nuestro modulo analitics
+    script(type='module' src='/static/js/analytics.js')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title}
+  body
+    .container
+      .row.col.s12.l8.offset-l2
+        h1 Elige tu comida favorita
+        .input-field.col.s6
+          input#comidaFavTextInput.validate(placeholder='Las cemitas son tortas' type='text')
+          label(for='comidaFavTextInput') Comida favorita
+        .input-field.col.s6
+          a#votarComida.waves-effect.waves-light.btn
+            i.material-icons.right check
+            | Votar
+        br
+        br
+        h1 Elige tu color favorito
+        .input-field.col.s6
+          input#colorFavTextInput.validate(placeholder='El negro no es un color' type='text')
+          label(for='colorFavTextInput') Color favorito
+        .input-field.col.s6
+          a#votarColor.waves-effect.waves-light.btn
+            i.material-icons.right check
+            | Votar
